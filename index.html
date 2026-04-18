@@ -1,0 +1,183 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Smart Earning Community</title>
+
+<style>
+body {
+  margin:0;
+  font-family: Arial, sans-serif;
+  background: linear-gradient(270deg, #0f172a, #1e293b, #0f172a);
+  background-size: 600% 600%;
+  animation: gradientMove 12s ease infinite;
+  color:white;
+  text-align:center;
+}
+
+@keyframes gradientMove {
+  0% {background-position:0% 50%;}
+  50% {background-position:100% 50%;}
+  100% {background-position:0% 50%;}
+}
+
+.container {
+  padding:20px;
+  animation: fadeIn 1.5s ease;
+}
+
+@keyframes fadeIn {
+  from {opacity:0; transform:translateY(20px);}
+  to {opacity:1; transform:translateY(0);}
+}
+
+img {
+  width:100%;
+  max-width:350px;
+  border-radius:12px;
+  margin-top:15px;
+}
+
+h1 {
+  font-size:26px;
+  margin-top:15px;
+}
+
+p {
+  opacity:0.85;
+}
+
+.btn {
+  display:inline-block;
+  margin-top:20px;
+  padding:15px 30px;
+  background:#22c55e;
+  color:white;
+  text-decoration:none;
+  border-radius:10px;
+  font-weight:bold;
+  transition:0.3s;
+}
+
+.btn:hover {
+  background:#16a34a;
+  transform:scale(1.05);
+}
+
+.card {
+  margin-top:20px;
+  background:#334155;
+  padding:15px;
+  border-radius:12px;
+}
+
+.counter-box {
+  margin-top:20px;
+  padding:15px;
+  background:#1e293b;
+  border-radius:12px;
+}
+
+.counter-number {
+  font-size:32px;
+  color:#22c55e;
+  font-weight:bold;
+  animation:pulse 1.5s infinite;
+}
+
+@keyframes pulse {
+  0% {transform:scale(1);}
+  50% {transform:scale(1.1);}
+  100% {transform:scale(1);}
+}
+
+.small {
+  font-size:12px;
+  opacity:0.6;
+  margin-top:20px;
+}
+
+/* Popup */
+.popup {
+  position:fixed;
+  bottom:20px;
+  left:20px;
+  background:#22c55e;
+  color:black;
+  padding:10px 15px;
+  border-radius:8px;
+  font-size:14px;
+  display:none;
+  animation:fadePopup 0.5s;
+}
+
+@keyframes fadePopup {
+  from {opacity:0; transform:translateY(20px);}
+  to {opacity:1; transform:translateY(0);}
+}
+</style>
+</head>
+
+<body>
+
+<div class="container">
+
+<img src="YOUR_IMAGE_LINK_HERE" alt="promo">
+
+<h1>🔥 Smart Online Earning Community</h1>
+
+<p>Join kore dekho kivabe smart player ra earning explore kore 👇</p>
+
+<a href="https://t.me/bdbet1official" class="btn">Join Free Telegram 🚀</a>
+
+<div class="counter-box">
+  <div class="counter-number" id="counter">5231</div>
+  <div>People joined recently</div>
+</div>
+
+<div class="card">
+  <h3>Inside Community:</h3>
+  <p>
+  ✔ Daily insights<br>
+  ✔ Beginner tips<br>
+  ✔ Risk awareness<br>
+  ✔ Smart earning ideas
+  </p>
+</div>
+
+<p class="small">
+Educational purpose only. No guaranteed income. Please understand risks.
+</p>
+
+</div>
+
+<div class="popup" id="popup"></div>
+
+<script>
+// Counter
+let count = 5231;
+setInterval(() => {
+  let increase = Math.floor(Math.random() * 3) + 1;
+  count += increase;
+  document.getElementById("counter").innerText = count;
+}, 2000);
+
+// Popup notifications
+const names = ["Rahim", "Karim", "Hasan", "Sohan", "Imran"];
+const popup = document.getElementById("popup");
+
+setInterval(() => {
+  let name = names[Math.floor(Math.random() * names.length)];
+  popup.innerText = name + " joined just now 🔥";
+  popup.style.display = "block";
+
+  setTimeout(() => {
+    popup.style.display = "none";
+  }, 3000);
+
+}, 5000);
+</script>
+
+</body>
+</html>
